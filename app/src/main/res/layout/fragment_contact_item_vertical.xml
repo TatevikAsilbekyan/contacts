@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    style="@style/Widget.MaterialComponents.CardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/list_item_margin"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/list_item_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contact_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_thumb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/list_item_avatar_margin"
+            android:maxWidth="@dimen/list_item_avatar_maxWidth"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_item_text_margin"
+            android:paddingStart="@dimen/list_item_text_padding"
+            android:paddingEnd="@dimen/list_item_text_padding"
+            android:textAppearance="@style/AppTheme.TextAppearance.Title1"
+            app:layout_constraintStart_toEndOf="@id/contact_thumb"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_item_text_margin"
+            android:paddingStart="@dimen/list_item_text_padding"
+            android:paddingEnd="@dimen/list_item_text_padding"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toEndOf="@id/contact_thumb"
+            app:layout_constraintTop_toBottomOf="@id/contact_name"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_item_text_margin"
+            android:paddingStart="@dimen/list_item_text_padding"
+            android:paddingEnd="@dimen/list_item_text_padding"
+            android:paddingBottom="@dimen/list_item_text_margin"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toEndOf="@id/contact_thumb"
+            app:layout_constraintTop_toBottomOf="@id/contact_address"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

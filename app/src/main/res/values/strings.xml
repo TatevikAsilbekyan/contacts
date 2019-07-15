@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">KSPE Contacts</string>
+    <string name="company">KSPE</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="empty_content">No contacts yet</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_bottom_margin">25dp</dimen>
+    <dimen name="empty_text_top_margin">15dp</dimen>
+    <dimen name="list_default_padding">11dp</dimen>
+    <dimen name="list_item_corner_radius">5dp</dimen>
+    <dimen name="list_item_margin">5dp</dimen>
+    <dimen name="list_item_avatar_margin">8dp</dimen>
+    <dimen name="list_item_text_padding">8dp</dimen>
+    <dimen name="list_item_text_margin">5dp</dimen>
+    <dimen name="list_item_avatar_maxWidth">80dp</dimen>
+    <dimen name="item_avatar_size">150dp</dimen>
+    <dimen name="item_close_top_margin">10dp</dimen>
+    <dimen name="item_name_top_margin">15dp</dimen>
+    <dimen name="item_action_top_margin">20dp</dimen>
+    <dimen name="item_text_top_margin_big">25dp</dimen>
+    <dimen name="item_text_top_margin_small">15dp</dimen>
+    <dimen name="item_text_start_margin">15dp</dimen>
+    <dimen name="item_text_icon_start_padding">5dp</dimen>
+    <dimen name="text_default_size">18sp</dimen>
+</resources>

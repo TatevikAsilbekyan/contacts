@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ic_contact" type="drawable">@drawable/ic_contact_24dp</item>
+    <item name="ic_close" type="drawable">@drawable/ic_expand_24dp</item>
+    <item name="ic_empty" type="drawable">@drawable/ic_contact_24dp</item>
+    <item name="ic_phone" type="drawable">@drawable/ic_phone_black_24dp</item>
+    <item name="ic_map" type="drawable">@drawable/ic_directions_black_24dp</item>
+    <item name="ic_email" type="drawable">@drawable/ic_email_black_24dp</item>
+    <item name="ic_user" type="drawable">@drawable/ic_person_black_24dp</item>
+    <item name="ic_pin" type="drawable">@drawable/ic_place_black_24dp</item>
+    <item name="ic_device" type="drawable">@drawable/ic_smartphone_black_24dp</item>
+    <item name="ic_cake" type="drawable">@drawable/ic_cake_black_24dp</item>
+    <item name="ic_time" type="drawable">@drawable/ic_av_timer_black_24dp</item>
+    <item name="ic_nationality" type="drawable">@drawable/ic_public_black_24dp</item>
+</resources>

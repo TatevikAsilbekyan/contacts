@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".features.contacts.ui.ContactDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_item_detail_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_item_detail_avatar"
+            android:layout_width="@dimen/item_avatar_size"
+            android:layout_height="@dimen/item_avatar_size"
+            app:layout_constraintStart_toStartOf="@id/contact_item_detail_cover"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_cover"
+            app:layout_constraintEnd_toEndOf="@id/contact_item_detail_cover"
+            app:layout_constraintBottom_toBottomOf="@id/contact_item_detail_cover" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_item_detail_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_close_top_margin"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_name_top_margin"
+            android:textAppearance="@style/AppTheme.TextAppearance.Title2"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_avatar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/contact_item_detail_phone_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_action_top_margin"
+            app:elevation="0dp"
+            app:srcCompat="@drawable/ic_phone"
+            app:tint="@color/colorPrimary"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_name"
+            app:layout_constraintEnd_toStartOf="@id/contact_item_detail_email_fab"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/contact_item_detail_email_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_action_top_margin"
+            app:elevation="0dp"
+            app:srcCompat="@drawable/ic_email"
+            app:tint="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_name"
+            app:layout_constraintEnd_toStartOf="@id/contact_item_detail_map_fab"
+            app:layout_constraintStart_toEndOf="@+id/contact_item_detail_phone_fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/contact_item_detail_map_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_action_top_margin"
+            app:elevation="0dp"
+            app:srcCompat="@drawable/ic_map"
+            app:tint="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/contact_item_detail_email_fab" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_big"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_user"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_phone_fab"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_dob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_cake"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_username"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_pin"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_dob"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_email"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_address"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_device"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_email"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact_item_detail_timezone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginEnd="@dimen/item_text_start_margin"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            android:drawableStart="@drawable/ic_time"
+            android:textAppearance="@style/AppTheme.TextAppearance.Subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_phone"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_item_detail_nat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_start_margin"
+            android:layout_marginBottom="@dimen/item_text_top_margin_small"
+            android:drawablePadding="@dimen/item_text_icon_start_padding"
+            app:srcCompat="@drawable/ic_nationality"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_timezone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/contact_item_detail_nationality"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/item_text_top_margin_small"
+            android:layout_marginStart="@dimen/item_text_icon_start_padding"
+            android:layout_marginBottom="@dimen/item_text_top_margin_small"
+            app:layout_constraintStart_toEndOf="@id/contact_item_detail_nat"
+            app:layout_constraintTop_toBottomOf="@id/contact_item_detail_timezone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
